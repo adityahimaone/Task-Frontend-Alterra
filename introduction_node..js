@@ -1,3 +1,26 @@
+//1
+var _ = require('lodash');
+
+const anggota_kelas = ["budi","sita","ayu","rena","omen"];
+let mengumpulkan_tugas = ["rena","omen"];
+
+let belum_mengumpulan = _.difference(anggota_kelas, mengumpulkan_tugas);
+console.log(belum_mengumpulan)
+
+let kelompok = _.chunk(anggota_kelas, 2)
+console.log(kelompok)
+
+let newKelas = _.join(anggota_kelas,'-')
+console.log(newKelas)
+
+let dropAnggota = _.drop(anggota_kelas,)
+console.log(dropAnggota)
+
+let reverseKelas = _.reverse(anggota_kelas)
+console.log(reverseKelas)
+
+
+
 // 2
 let A = "DDUUDDUDUUUD"
 let B = "UDDDUDUU "
