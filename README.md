@@ -1,4 +1,4 @@
-#TASK Frontend Alterra ✅
+#TASK & Resources Frontend Alterra ✅
 <hr>
 
 | Table of Content | Description |
