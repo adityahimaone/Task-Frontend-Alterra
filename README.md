@@ -9,3 +9,4 @@
 | [Task Introduction React](https://github.com/adityahimaone/Task-Frontend-Alterra/tree/task-introduction-react) | |
 | [Exersice Fundamental React](https://github.com/adityahimaone/Task-Frontend-Alterra/tree/exercise-react-fundamental) | JSX using props json |
 | [Task Fundamental React](https://github.com/adityahimaone/Task-Frontend-Alterra/tree/task-fundamental-react) | Make Todo App using JSX, React Component, Props json, Mapping Json  and Conditional Tenary Inline Style |
+| [Exercise React Event Handling](https://github.com/adityahimaone/Task-Frontend-Alterra/tree/exercise-react-eventhandling) | Event Handling DOM |
