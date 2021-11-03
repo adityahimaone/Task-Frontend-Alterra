@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./TodoList.module.css";
 
-export default function TodoList({ todo, key2 }) {
+export default function TodoList({ todo }) {
   // console.log(key2);
   const isCompleted = { textDecoration: "line-through" };
   return (
@@ -10,7 +10,6 @@ export default function TodoList({ todo, key2 }) {
         <h5
           className={styles.title}
           style={todo.completed ? isCompleted : null}
-          id={key2}
         >
           {todo.title}
         </h5>

@@ -7,7 +7,7 @@ export default function TodoPage({ title, todos }) {
     <>
       <Header title={title} />
       {todos.map((list) => (
-        <TodoList key2={list.id} todo={list} />
+        <TodoList key={list.id} todo={list} />
       ))}
     </>
   );
