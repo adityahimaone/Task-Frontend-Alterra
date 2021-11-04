@@ -1,0 +1,27 @@
+.addTodo {
+  margin-bottom: 20px;
+}
+
+.addTodo input[type="text"] {
+  border-radius: 25px 0px 0px 25px;
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: 1px solid grey;
+}
+
+.addTodo button {
+  border-radius: 0px 25px 25px 0px;
+  color: white;
+  padding: 6px;
+  margin-top: 8px;
+  background: rgb(8, 117, 26);
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+.addTodo button:hover {
+  background-color: #5cbf2a;
+}
