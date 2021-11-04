@@ -2,9 +2,17 @@ import React, { Component } from "react";
 import styles from "./ListItem.module.css";
 
 export default class ListItem extends Component {
-  state = {
-    completed: false,
-  };
+  // state = {
+  //   completed: false,
+  // };
+
+  constructor(props) {
+    super(props);
+    let completedProps = props.item.completed
+    this.state = {
+      completed: completedProps,
+    };
+  }
 
   onChange = (e) => {
     const target = e.target;
