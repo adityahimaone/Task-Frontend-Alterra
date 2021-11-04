@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import styles from "./ListItem.module.css";
 
 export default function ListItem({ item, deleteTodo }) {
+  // console.log("input", item.completed);
   let completedProps = item.completed;
   const [data, setData] = useState({
     completed: completedProps,
   });
-
   const onChange = (e) => {
     const target = e.target;
     const value = target.type === "checkbox" ? target.checked : target.value;

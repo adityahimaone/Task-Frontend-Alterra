@@ -5,18 +5,22 @@ import styles from "./ListTodo.module.css";
 export default function ListTodo({ data, deleteTodo }) {
   // console.log("data",data.data)
   // console.log(deleteTodo);
-  const newDataArray = data.data;
-  console.log("newDataArray", newDataArray);
+  // const newDataArray = data.data;
+  // console.log("newDataArray", newDataArray);
   return (
     <div>
       <table className={styles.tableTodo}>
         <tbody>
-          {newDataArray.map((item) => (
+          {data.data.map((item) => (
             <ListItem key={item.id} item={item} deleteTodo={deleteTodo} />
           ))}
-          {console.log("newDataArray", newDataArray)}
+          {/* {console.log("data in map", data)} */}
         </tbody>
       </table>
     </div>
   );
 }
+
+// // {Object.keys(data.data).map((item, i) => (
+// //   <ListItem key={item.id} item={data.data[item]} deleteTodo={deleteTodo} />
+// ))}
