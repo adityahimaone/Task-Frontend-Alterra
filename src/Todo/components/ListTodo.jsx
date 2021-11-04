@@ -7,9 +7,11 @@ export default function ListTodo(props) {
   return (
     <div>
       <table className={styles.tableTodo}>
-        {data.map((todo) => (
-          <ListItem key={todo.id} item={todo} deleteTodo={deleteTodo} />
-        ))}
+        <tbody>
+          {data.map((todo) => (
+            <ListItem key={todo.id} item={todo} deleteTodo={deleteTodo} />
+          ))}
+        </tbody>
       </table>
     </div>
   );
