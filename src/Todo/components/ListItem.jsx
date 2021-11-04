@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import styles from "./ListItem.module.css";
 
 export default class ListItem extends Component {
   state = {
@@ -34,11 +35,12 @@ export default class ListItem extends Component {
         </td>
         <td>
           <button
+            className={styles.listItemInput}
             onClick={() => {
               this.props.deleteTodo(this.props.item.id);
             }}
           >
-            Hapus
+            Delete
           </button>
         </td>
       </tr>

@@ -32,9 +32,8 @@ export default class InputTodo extends Component {
   };
   render() {
     return (
-      <div>
+      <div className={styles.addTodo}>
         <input
-          className={styles.addTodoInput}
           type="text"
           name="title"
           value={this.state.title}
@@ -43,7 +42,6 @@ export default class InputTodo extends Component {
         />
         <button
           onClick={this.handleSubmit}
-          className={styles.addTodo}
           type="submit"
         >
           Submit

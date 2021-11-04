@@ -5,7 +5,7 @@ import Todo from "./Todo/Todo";
 function App() {
   return (
     <div className="App">
-      <Todo />
+      <Todo header="todos app"/>
     </div>
   );
 }

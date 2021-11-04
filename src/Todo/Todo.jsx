@@ -3,6 +3,7 @@ import { mockData } from "../mockData";
 import InputTodo from "./components/InputTodo";
 import ListTodo from "./components/ListTodo";
 import nextId from "react-id-generator";
+import styles from "./Todo.module.css";
 
 export default class Todo extends Component {
   constructor(props) {
@@ -20,26 +21,12 @@ export default class Todo extends Component {
     this.setState({ data: [...this.state.data, newTodo] });
   };
 
-  handleInputChange(event) {
-    const target = event.target;
-    const value = target.type === "checkbox" ? target.checked : target.value;
-    const name = target.name;
-
-    this.setState({
-      [name]: value,
-    });
-  }
-
   render() {
     return (
       <div>
-        <h1>Todos</h1>
+        <h1 className={styles.rainbowText}>{this.props.header}</h1>
         <InputTodo addTodo={this.addTodo} />
-        <ListTodo
-          data={this.state.data}
-          deleteTodo={this.deleteTodo}
-          checkboxTodo={this.handleInputChange}
-        />
+        <ListTodo data={this.state.data} deleteTodo={this.deleteTodo} />
       </div>
     );
   }
