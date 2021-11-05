@@ -8,15 +8,20 @@ import styles from "./Todo.module.css";
 export default function Todo(props) {
   const [data, setData] = useState(mockData);
 
+  // const deleteTodo = (id) => {
+  //   setData((oldData) => {
+  //     oldData.data.filter((item) => item.id !== id);
+  //   });
+  // };
+
   const deleteTodo = (id) => {
-    setData((oldData) => {
-      oldData.data.filter((item) => item.id !== id);
-    });
+    setData((oldData) => ({
+      data: oldData.data.filter((item) => item.id !== id),
+    }));
   };
 
   const addTodo = (todo) => {
     const newTodo = { id: nextId(), ...todo };
-    // this.setState({ data: [...this.state.data, newTodo] });
     setData((oldData) => ({ data: [...oldData.data, newTodo] }));
   };
 
