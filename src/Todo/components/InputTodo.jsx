@@ -1,52 +1,47 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import styles from "./InputTodo.module.css";
 
-export default class InputTodo extends Component {
-  state = {
+export default function InputTodo({ addTodo }) {
+  const [data, setData] = useState({
     title: "",
     completed: false,
-  };
+  });
 
-  onChange = (e) => {
-    this.setState({
+  const onChange = (e) => {
+    setData({
       [e.target.name]: e.target.value,
     });
   };
 
-  handleSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    const inputNotEmpty = this.state.title;
+    const inputNotEmpty = data.title;
     if (inputNotEmpty) {
       const newData = {
-        title: this.state.title,
-        completed: this.state.completed,
+        title: data.title,
+        completed: data.completed,
       };
-      this.props.addTodo(newData);
-      this.setState({
-        nama: "",
+      addTodo(newData);
+      setData({
+        title: "",
         completed: false,
       });
     } else {
       alert("Harap masukan input");
     }
   };
-  render() {
-    return (
-      <div className={styles.addTodo}>
-        <input
-          type="text"
-          name="title"
-          value={this.state.title}
-          onChange={this.onChange}
-          placeholder="Add Todo"
-        />
-        <button
-          onClick={this.handleSubmit}
-          type="submit"
-        >
-          Submit
-        </button>
-      </div>
-    );
-  }
+  return (
+    <div className={styles.addTodo}>
+      <input
+        type="text"
+        name="title"
+        value={data.title}
+        onChange={onChange}
+        placeholder="Add Todo"
+      />
+      <button onClick={handleSubmit} type="submit">
+        Submit
+      </button>
+    </div>
+  );
 }

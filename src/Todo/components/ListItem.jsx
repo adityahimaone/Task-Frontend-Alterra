@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styles from "./ListItem.module.css";
 
 export default function ListItem({ item, deleteTodo }) {
-  // console.log("input", item.completed);
   let completedProps = item.completed;
   const [data, setData] = useState({
     completed: completedProps,
@@ -11,7 +10,6 @@ export default function ListItem({ item, deleteTodo }) {
     const target = e.target;
     const value = target.type === "checkbox" ? target.checked : target.value;
     const name = target.name;
-
     setData({
       [name]: value,
     });
@@ -25,7 +23,7 @@ export default function ListItem({ item, deleteTodo }) {
           type="checkbox"
           id="checklist"
           name="completed"
-          value="false"
+          value={data.completed}
           checked={data.completed}
           onChange={onChange}
         />
