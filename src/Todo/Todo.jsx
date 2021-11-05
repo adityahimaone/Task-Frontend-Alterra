@@ -5,7 +5,7 @@ import ListTodo from "./components/ListTodo";
 import nextId from "react-id-generator";
 import styles from "./Todo.module.css";
 
-export default function Todo(props) {
+export default function Todo({ header }) {
   const [data, setData] = useState(mockData);
 
   // const deleteTodo = (id) => {
@@ -27,7 +27,7 @@ export default function Todo(props) {
 
   return (
     <div>
-      <h1 className={styles.rainbowText}>{props.header}</h1>
+      <h1 className={styles.rainbowText}>{header}</h1>
       <InputTodo addTodo={addTodo} />
       <ListTodo data={data} deleteTodo={deleteTodo} />
     </div>

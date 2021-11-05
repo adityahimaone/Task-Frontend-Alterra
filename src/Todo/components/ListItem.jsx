@@ -6,6 +6,7 @@ export default function ListItem({ item, deleteTodo }) {
   const [data, setData] = useState({
     completed: completedProps,
   });
+  
   const onChange = (e) => {
     const target = e.target;
     const value = target.type === "checkbox" ? target.checked : target.value;
