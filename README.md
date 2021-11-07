@@ -12,3 +12,5 @@
 | [Exercise React Event Handling](https://github.com/adityahimaone/Task-Frontend-Alterra/tree/exercise-react-eventhandling) | Event Handling DOM |
 | [Task React TodoApp](https://github.com/adityahimaone/Task-Frontend-Alterra/tree/task-react-todoapp) | Todo APP |
 | [Task React Function Hook](https://github.com/adityahimaone/Task-Frontend-Alterra/tree/task-react-function-hook) | Todo APP |
+| [Task React Router](https://github.com/adityahimaone/Task-Frontend-Alterra/tree/task-react-router) | React Router DOM v6  |
+
