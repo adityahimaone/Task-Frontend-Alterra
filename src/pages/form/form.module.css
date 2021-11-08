@@ -1,0 +1,11 @@
+.inputForm {
+  @apply border rounded-lg shadow-md p-1 mt-1 block w-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent;
+}
+
+.labelForm {
+  @apply mb-2 font-medium text-lg text-gray-900;
+}
+
+.divForm {
+  @apply flex flex-col mb-4;
+}
