@@ -15,6 +15,6 @@
 | [Task React Router](https://github.com/adityahimaone/Task-Frontend-Alterra/tree/task-react-router) | React Router DOM v6  |
 | [Exercise React Form](https://github.com/adityahimaone/Task-Frontend-Alterra/tree/react-form) | React Form  |
 | [Task React Form](https://github.com/adityahimaone/Task-Frontend-Alterra/tree/task-react-form) | React Form  |
-| [Exercise React Redux](https://github.com/adityahimaone/Task-Frontend-Alterra/tree/task-react-form) | React Form  |
+| [Exercise React Redux](https://github.com/adityahimaone/Task-Frontend-Alterra/tree/react-redux) | React Redux  |
 | [Task React Redux](https://github.com/adityahimaone/Task-Frontend-Alterra/tree/task-react-redux) | React Redux  |
 
