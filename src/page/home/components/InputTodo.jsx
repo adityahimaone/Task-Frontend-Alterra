@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import styles from "./InputTodo.module.css";
+import { useDispatch } from "react-redux";
+import { addTodo } from "../../../store/todoSlice";
 
-export default function InputTodo({ addTodo }) {
+export default function InputTodo() {
+  const dispatch = useDispatch();
   const [data, setData] = useState({
     title: "",
     completed: false,
@@ -19,9 +22,9 @@ export default function InputTodo({ addTodo }) {
     if (inputNotEmpty) {
       const newData = {
         title: data.title,
-        completed: data.completed,
+        completed: false,
       };
-      addTodo(newData);
+      dispatch(addTodo(newData));
       setData({
         title: "",
         completed: false,
