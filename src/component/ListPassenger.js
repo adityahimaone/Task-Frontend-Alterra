@@ -1,0 +1,35 @@
+import ListItem from "./ListItem";
+import { useSelector, useDispatch } from "react-redux";
+import { hapusPengunjung } from "../store/passengerSlice";
+
+const ListPassenger = (props) => {
+  // console.log("masuk .hapusPengunjung" + props.hapusPengunjung);
+  const passengers = useSelector((state) => state.passenger.passengers);
+  const defaultPass = useSelector((state) => state);
+  console.log(passengers);
+  console.log("state", defaultPass);
+  const dispatch = useDispatch();
+  return (
+    <div>
+      <table cellPadding="5px" cellSpacing="0" style={{ margin: "auto" }}>
+        <thead bgcolor="red">
+          <td>Nama</td>
+          <td>Umur</td>
+          <td>Jenis Kelamin</td>
+          <td bgcolor="white" className="removeBorder"></td>
+        </thead>
+        {passengers.map((item) => (
+          <ListItem
+            key={item.id}
+            data={item}
+            hapusPengunjung={() => {
+              dispatch(hapusPengunjung(item.id));
+            }}
+          />
+        ))}
+      </table>
+    </div>
+  );
+};
+
+export default ListPassenger;
