@@ -3,7 +3,7 @@
 import InputTodo from "./components/InputTodo";
 import ListTodo from "./components/ListTodo";
 // import nextId from "react-id-generator";
-// import styles from "./Todo.module.css";
+// import Styles from "./Todo.module.css";
 import { DashboardLayout } from "../../components/Layout";
 
 export default function Todo({ header }) {

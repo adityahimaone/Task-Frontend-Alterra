@@ -1,7 +1,12 @@
 import React, { useState } from "react";
-import styles from "./ListItem.module.css";
+// import styles from "./ListItem.module.css";
 
-export default function ListItem({ item, deleteTodo }) {
+export default function ListItem({
+  item,
+  deleteTodo,
+  editTodo,
+  checklistTodo,
+}) {
   let completedProps = item.completed;
   const [data, setData] = useState({
     completed: completedProps,
@@ -16,7 +21,7 @@ export default function ListItem({ item, deleteTodo }) {
     });
   };
 
-  const isCompleted = { textDecoration: "line-through" };
+  // const isCompleted = { textDecoration: "line-through" };
   return (
     <tr>
       <td>
@@ -26,10 +31,17 @@ export default function ListItem({ item, deleteTodo }) {
           value={data.completed}
           checked={data.completed}
           onChange={onChange}
+          onClick={() => {
+            checklistTodo(item.id);
+          }}
           className="h-4 w-4 text-green-500 mr-2"
         />
       </td>
-      <td className={data.completed ? "line-through italic text-gray-700" : null}>{item.title}</td>
+      <td
+        className={data.completed ? "line-through italic text-gray-700" : null}
+      >
+        {item.title}
+      </td>
       <td>
         <button
           className="rounded-xl px-2 py-1 ml-5 text-white bg-green-500 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-opacity-50"

@@ -1,8 +1,10 @@
 import React from "react";
 import ListItem from "./ListItem";
-import styles from "./ListTodo.module.css";
+// import styles from "./ListTodo.module.css";
 import { useSelector, useDispatch } from "react-redux";
 import { deleteTodo } from "../../../store/todoSlice";
+import { editTodo } from "../../../store/todoSlice";
+import { checklistTodo } from "../../../store/todoSlice";
 
 export default function ListTodo() {
   const todos = useSelector((state) => state.todo.todos);
@@ -19,6 +21,12 @@ export default function ListTodo() {
               item={item}
               deleteTodo={() => {
                 dispatch(deleteTodo(item.id));
+              }}
+              editTodo={() => {
+                dispatch(editTodo(item.id));
+              }}
+              checklistTodo={() => {
+                dispatch(checklistTodo(item.id));
               }}
             />
           ))}
