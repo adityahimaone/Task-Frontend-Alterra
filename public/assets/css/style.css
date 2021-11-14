@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap");
+
+.nav-link {
+  font-family: Roboto;
+  font-style: normal;
+  color: #19345e !important;
+  font-size: 15px;
+  line-height: 15px;
+}
+
+.nav-link:hover {
+  color: #f47522 !important;
+}
+
+.active {
+  color: #f47522 !important;
+}
+
+.nav-custom-width {
+  margin-left: 98px !important;
+  margin-right: 98px !important;
+}
+
+.container-fluid {
+  padding: 0 !important;
+}
+
+.hero {
+  background-image: url(/assets/img/bg-img.png);
+  background-size: cover;
+  padding-top: 184px;
+  padding-bottom: 300px;
+}
+
+.avatar {
+  border-radius: 50% !important;
+  width: 355px;
+  height: auto;
+}
+
+.hero-desc h5 {
+  font-size: 25px;
+  color: #19345e !important;
+}
+
+.hero-desc h1 {
+  font-size: 85px;
+  font-style: normal !important;
+  font-weight: bold !important;
+  line-height: 99.61px !important;
+  color: #19345e !important;
+}
+
+.hero-desc h3 {
+  font-size: 35px;
+  color: #19345e !important;
+}
+
+.hero-left {
+  padding-right: 0px !important;
+}
+
+.hero-right {
+  padding-left: 40px !important;
+  padding-right: 0px !important;
+  font-family: Roboto;
+}
+
+.hero-btn {
+  background-color: #f47522 !important;
+  margin-top: 10px;
+  padding: 10px 40px 10px 40px !important;
+  border-radius: 20px !important;
+  border-style: none !important;
+}
+
+.hero-btn:hover {
+  background-color: #19345e !important;
+}
+
+@media (min-width: 468px) and (max-width: 991.98px) {
+  .nav-custom-width {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+  }
+
+  .avatar {
+    border-radius: 50% !important;
+    width: 50%;
+    height: auto;
+  }
+
+  .hero-desc h5 {
+    font-size: 20px;
+    color: #19345e !important;
+  }
+
+  .hero-desc h1 {
+    font-size: 45px;
+    font-style: normal !important;
+    font-weight: bold !important;
+    color: #19345e !important;
+  }
+
+  .hero-desc h3 {
+    font-size: 25px;
+    color: #19345e !important;
+  }
+
+  .hero-btn {
+    background-color: #f47522 !important;
+    padding: 5px 20px 5px 20px !important;
+    border-radius: 20px !important;
+    border-style: none;
+  }
+
+  .overlay-img img {
+    width: 25%;
+  }
+
+  .contact-left {
+    width: 50%;
+    height: 745px;
+  }
+}
+
+/* CONTACT */
+
+.overlay-img {
+  background: #19345eb9;
+  z-index: 2;
+}
+
+.contact-left {
+  height: 745px;
+  background-image: url(/assets/img/charles-rRWiVQzLm7k-unsplash.jpg);
+  background-size: cover;
+}
+
+@media (min-height: 762px) {
+  .contact-left {
+    height: 910px;
+  }
+}
+
+.contact-right {
+  padding-left: 100px !important;
+  padding-right: 100px !important;
+  color: #19345e;
+  font-family: Roboto;
+}
+
+.contact-right h1 {
+  font-size: 28px;
+}
+.contact-right label {
+  font-size: 20px;
+}
+
+.contact-btn {
+  background-color: #f47522 !important;
+  padding: 10px 30px 10px 30px !important;
+  border-radius: 25px !important;
+  border-style: none !important;
+}
+
+.contact-btn:hover {
+  background-color: #19345e !important;
+}
+
+.stars-red {
+  color: red;
+}
+
+/* Reviw Message */
+.main {
+  height: 700px;
+}
+
+.message {
+  width: 664px;
+  height: 580px;
+}
+
+.message .row {
+  padding: 30px 30px 30px 30px !important;
+}
+
+.tbl-review td {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  color: #19345e;
+}
+
+.line {
+  width: 300px;
+  height: 0px;
+  left: 452px;
+  top: 441px;
+  border: 1px solid #ccd7eb;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.message-result {
+  margin-bottom: 120px;
+}
+
+.message-result p {
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: bold;
+  color: #19345e;
+}
+
+.greeting {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+
+  color: #19345e;
+}
+
+.greeting p {
+  margin: 2px;
+}
+
+.greeting a {
+  margin-top: 10px;
+}
+
+.footer {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 230px;
+  left: 0px;
+  top: 530px;
+  background: #edf6ff;
+}
+
+.dot-img {
+  z-index: 1;
+  position: absolute;
+  left: 387px;
+  top: 27px;
+}
