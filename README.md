@@ -18,6 +18,6 @@
 | [Exercise React Redux](https://github.com/adityahimaone/Task-Frontend-Alterra/tree/react-redux) | React Redux  |
 | [Task React Redux](https://github.com/adityahimaone/Task-Frontend-Alterra/tree/task-react-redux) | React Redux - Persist => Global State Management  
 | [Task React Testing](https://github.com/adityahimaone/Task-Frontend-Alterra/tree/task-react-testing) | React Testing  |
-| [Task React Graphql](https://github.com/adityahimaone/Task-Frontend-Alterra/tree/task-react-graphql) | useQuery, useLazyQuery, Mutation (CRUD) |
+| [Task React Graphql](https://github.com/adityahimaone/Task-Frontend-Alterra/tree/task-react-graphql) | useQuery, useLazyQuery, Mutation (CRUD), Subscription |
 
 
