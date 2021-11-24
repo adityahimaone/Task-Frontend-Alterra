@@ -3,7 +3,13 @@ import PassengerInput from "./PassengerInput";
 import ListPassenger from "./ListPassenger";
 import Header from "./Header";
 import React, { useEffect, useState } from "react";
-import { gql, useQuery, useLazyQuery, useMutation } from "@apollo/client";
+import {
+  gql,
+  useQuery,
+  useLazyQuery,
+  useMutation,
+  useSubscription,
+} from "@apollo/client";
 
 const GetGuestQuery = gql`
   query getGuest {
@@ -56,6 +62,17 @@ const EditGuest = gql`
   }
 `;
 
+const SubsGuest = gql`
+  subscription subsPengunjung {
+    passengers_pengunjung {
+      id
+      jk
+      nama
+      umur
+    }
+  }
+`;
+
 export default function Home() {
   //Get Query
   const {
@@ -86,7 +103,7 @@ export default function Home() {
   //Delete
   const [deleteGuest, { data: dataDelete, loading: loadingDelete }] =
     useMutation(DeleteGuestMutation, {
-      refetchQueries: ["GetGuestQuery"],
+      // refetchQueries: [GetGuestQuery],
     });
 
   const handleDelete = (id) => {
@@ -97,7 +114,7 @@ export default function Home() {
   const [addGuest, { data: dataAdd, loading: loadingAdd }] = useMutation(
     AddGuest,
     {
-      refetchQueries: ["GetGuestQuery"],
+      // refetchQueries: [GetGuestQuery],
     }
   );
 
@@ -117,7 +134,7 @@ export default function Home() {
   const [editGuest, { data: dataEdit, loading: loadingEdit }] = useMutation(
     EditGuest,
     {
-      refetchQueries: ["GetGuestQuery"],
+      // refetchQueries: [GetGuestQuery],
     }
   );
 
@@ -132,12 +149,20 @@ export default function Home() {
     });
   };
 
+  //Subs
+  const {
+    data: dataSubs,
+    loading: loadingSubs,
+    error: errorSubs,
+  } = useSubscription(SubsGuest);
+  // console.log("dataSubs", dataSubs);
+
   //Refetch Data Change
-  useEffect(() => {
-    if (dataAdd || dataDelete) {
-      refetch();
-    }
-  }, [dataAdd, dataDelete]);
+  // useEffect(() => {
+  //   if (dataAdd || dataDelete) {
+  //     refetch();
+  //   }
+  // }, [dataAdd, dataDelete]);
 
   //Loading
   if (loadingGet || loadingDelete || loadingAdd || loadingEdit)
@@ -151,7 +176,7 @@ export default function Home() {
         <button onClick={onGetData}>Get Data</button>
       </div> */}
       <ListPassenger
-        data={DataGetPassenger}
+        data={dataSubs}
         hapusPengunjung={handleDelete}
         editPengunjung={handleEdit}
       />
